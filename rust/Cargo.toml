@@ -1,0 +1,8 @@
+[package]
+name = "lodestone-rust-link"
+version = "0.0.1"
+
+[build-dependencies]
+cc = "1.0"
+
+[dependencies]

@@ -1,0 +1,7 @@
+
+
+module = llvm_create_module("main")
+void_type = llvm_create_void_type()
+function_type = llvm_create_function_type(void_type)
+create_function(module, function, "printf")
+println(module.to_string())
