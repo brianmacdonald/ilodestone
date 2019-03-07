@@ -5,6 +5,40 @@ def unwrap(obj):
     return obj.attr['native']
 
 
+class Expression:
+
+    def __init__(self, token, value):
+        self.token = token
+        self.value = value
+
+
+class BooleanExpression(Expression):
+    ...
+
+
+class IdentifierExpression(Expression):
+    ...
+
+
+class IntegerLiteral(Expression):
+    ...
+
+
+class PrefixExpression(Expression):
+
+    def __init__(self, token, value, right):
+        super().__init__(token, value)
+        self.operator = value
+        self.right = right
+
+
+class ExpressionStatement:
+
+    def __init__(self, token, expression):
+        self.token = token
+        self.expression = expression
+
+
 class ILObject:
 
     def __init__(self):
